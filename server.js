@@ -100,4 +100,4 @@ app.post('/refresh', (req, res) => {
 app.get('/logout', (req, res) => {
     res.clearCookie('refreshToken').clearCookie('accessToken').clearCookie('authSession').clearCookie('refreshTokenId').send('User Logout');
 })
-app.listen(4000)
+app.listen(process.env.PORT||4000)
